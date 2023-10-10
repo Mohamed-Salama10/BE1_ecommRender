@@ -1,8 +1,14 @@
+
 import mongoose from "mongoose";
 
 export const dbConnection = async () => {
+  const connectionLink = process.env.CONNECTION_DB_CLOUD
+  console.log(connectionLink);
   return await mongoose
-    .connect("mongodb://127.0.0.1:27017/ecomdb")
+    .connect(connectionLink)
     .then((res) => console.log("Connected to MongoDB..."))
-    .catch((err) => console.error("Could not connect to MongoDB..."));
+    .catch((err) => {
+      console.log(err);
+      console.error("Could not connect to MongoDB...")
+    });
 };
