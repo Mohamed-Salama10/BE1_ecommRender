@@ -3,10 +3,10 @@ import { sendEmailService } from "../../services/sendEmailService.js";
 
 import { generateToken, verifyToken } from "../../util/tokenFunctions.js";
 import { isEmailExist } from "./userAuth.helperFunc.js";
-import { log } from "console";
+
 import bcrypt from "bcrypt";
 import { nanoid } from "nanoid";
-import { send } from "process";
+
 import { emailTemplate } from "./../../util/emailTTemplate.js";
 // ============================== signUp   ================================================
 export const signUp = async (req, res, next) => {
