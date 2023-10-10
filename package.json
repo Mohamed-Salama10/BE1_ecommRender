@@ -6,7 +6,7 @@
   "type": "module",
   "engines": {"node": "v18.17.0"},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon start"
   },
   "author": "",
   "license": "ISC",
